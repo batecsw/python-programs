@@ -2,8 +2,11 @@
 import math
 import random
 
-arena_width = 800
-arena_height = 600
+WIDTH = 1000
+HEIGHT = 800
+
+arena_width = 1000
+arena_height = 800
 
 ship_radius = 30
 
