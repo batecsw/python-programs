@@ -15,7 +15,7 @@ def ordinal(x):
     return str(x) + suff
 
 
-for i in range(1, 31):
+for i in range(1, 32):
     print(ordinal(i))
 
 
