@@ -8,7 +8,8 @@ def on_mouse_move(pos, rel, buttons):
     ship.x = pos[0]
 
 def spawn_gem():
-    gem = Actor("gemgreen")
+    items = ["gemred" , "gemyellow" , "gemgreen" , "gemblue"]
+    gem = Actor(items[random.randint(0, 3)])
     gem.x = random.randint(20, 780)
     gem.y = 0
     return gem
