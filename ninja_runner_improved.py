@@ -42,9 +42,11 @@ def update():
         if actor.colliderect(runner):
             lives -= 1
             obstacles.remove(actor)
+            sounds.ouch.play()
 
       if keyboard.up and runner.y > 380:
         velocity_y = -20
+        sounds.fast_whoosh.play()
 
       runner.y += velocity_y
       velocity_y += gravity
