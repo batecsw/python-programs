@@ -33,6 +33,7 @@ def update():
             ship.x = 0
 
         gem.y = gem.y + 4 + score / 5
+        gem.x = gem.x + random.randint(-4, 4)
 
         if gem.y > 600:
             gem.x = random.randint(20, 780)
