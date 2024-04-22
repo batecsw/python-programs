@@ -22,11 +22,12 @@ score = 0
 lives = 3
 game_over = False
 high_score = 0
+best_player = ""
 gems = [spawn_gem()]
 counter = 0
 
 def update():
-    global score, high_score, lives, game_over, counter
+    global score, high_score, best_player, lives, game_over, counter
     if not game_over:
         if keyboard.left:
             ship.x = ship.x - 5
@@ -62,6 +63,7 @@ def update():
         if keyboard.y:
             if score > high_score:
                 high_score = score
+                best_player = input("Please enter your name")
             score = 0
             lives = 3
             game_over = False
@@ -79,5 +81,5 @@ def draw():
             gem.draw()
         ship.draw()
         screen.draw.text("Score: " + str(score), (15, 10), color=(255, 255, 255), fontsize=30)
-        screen.draw.text("High Score: " + str(high_score), (250, 10), color=(255, 255, 255), fontsize=30)
-        screen.draw.text("Lives: " + str(lives), (500, 10), color=(255, 255, 255), fontsize=30)
+        screen.draw.text("High Score: " + str(high_score) + "      Champion:" + best_player, (150, 10), color=(255, 255, 255), fontsize=30)
+        screen.draw.text("Lives: " + str(lives), (650, 10), color=(255, 255, 255), fontsize=30)
