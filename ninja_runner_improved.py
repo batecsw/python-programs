@@ -26,7 +26,7 @@ def update():
   runner.next_image()
 
   if game_over == False:
-      obstacles_timeout -= 1
+      obstacles_timeout -= 1+score/100
       if obstacles_timeout < 1:
         actor = Actor('cactus')
         actor.x = 850
