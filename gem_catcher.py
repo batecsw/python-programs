@@ -1,7 +1,6 @@
-<<<<<<< Updated upstream
+
 import random
-=======
->>>>>>> Stashed changes
+
 
 WIDTH = 800
 HEIGHT = 600
